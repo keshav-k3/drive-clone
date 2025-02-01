@@ -1,4 +1,4 @@
-import type { FileItem } from "../types/drive"
+import type { FileItem } from "types/drive"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "~/components/ui/table"
 import { File, FileText, Folder, ImageIcon, FileSpreadsheet } from "lucide-react"
 
