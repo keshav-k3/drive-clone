@@ -40,7 +40,7 @@ export function FileList({ files, onFolderClick }: FileListProps) {
               {file.name}
             </TableCell>
             <TableCell>{file.type === "folder" ? "Folder" : file.mimeType}</TableCell>
-            <TableCell>{file.size || "--"}</TableCell>
+            <TableCell>{file.size ?? "--"}</TableCell>
             <TableCell>{file.modified}</TableCell>
           </TableRow>
         ))}

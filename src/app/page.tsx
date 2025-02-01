@@ -39,7 +39,7 @@ export default function Drive() {
       const folder = mockFiles.find((f) => f.id === currentId)
       if (folder) {
         breadcrumbs.unshift({ id: folder.id, name: folder.name })
-        currentId = folder.parentId || ""
+        currentId = folder.parentId ?? ""
       } else {
         break
       }
@@ -124,7 +124,7 @@ export default function Drive() {
                     <TableCell className="text-muted-foreground">
                       {file.type === "folder" ? "Folder" : file.mimeType}
                     </TableCell>
-                    <TableCell className="text-muted-foreground">{file.size || "--"}</TableCell>
+                    <TableCell className="text-muted-foreground">{file.size ?? "--"}</TableCell>
                     <TableCell className="text-muted-foreground">{file.modified}</TableCell>
                   </TableRow>
                 ))}
